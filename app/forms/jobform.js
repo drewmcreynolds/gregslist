@@ -4,14 +4,14 @@ export function getJobFormTemplate() {
 
     <div class="form-group">
       <label for="pay" class="">Pay:</label>
-      <input type="number" class="form-control" name="pay" id="pay" min="25000" max="99999999">
+      <input type="number" class="form-control" name="pay" id="pay" min="25000" max="99999999" required>
     </div>
     <div class="form-group">
     <label for="location" class="">Location:</label>
-    <input type="location" class="form-control" name="location" id="location">
+    <input type="location" class="form-control" name="location" id="location" required>
     </div><div class="form-group">
     <label for="company" class="">Company:</label>
-    <input type="text" class="form-control" name="company" id="company">
+    <input type="text" class="form-control" name="company" id="company" required >
     </div>
     <div class="form-group">
     <label for="skill" class="">Skill:</label>
