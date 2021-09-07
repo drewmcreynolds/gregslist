@@ -1,8 +1,8 @@
-import { generateId } from "../Utils/generateId.js"
+
 
 export class House {
     constructor(houseData) {
-        this.id = houseData.id || generateId()        
+        this.id = houseData.id     
         this.year = houseData.year
         this.description = houseData.description
         this.price = houseData.price
