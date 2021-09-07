@@ -15,9 +15,10 @@ function _drawHouses() {
 export class HousesController {
   constructor() {
     ProxyState.on('houses', _drawHouses)
+    housesService.getHouses()
   }
 
-  addHouse(){
+  async addHouse(){
     event.preventDefault() // do not forget this line on form submissions
     /**
      * @type {HTMLFormElement}
@@ -27,15 +28,17 @@ export class HousesController {
     // TODO get data from form
 
     const houseData = {
+      bedrooms:form.bedrooms.value,
+      bathrooms: form.bathrooms.value,
       year: form.year.value,
-      location: form.location.value,
+      levels: form.levels.value,
       price: form.price.value,
       description: form.description.value,
-      img: form.img.value
+      imgUrl: form.imgUrl.value
     }
 
     try {
-      housesService.addHouse(houseData)
+      await housesService.addHouse(houseData)
     } catch (e) {
       // TODO draw errors
       form.make.classList.add('border-danger')
@@ -59,4 +62,11 @@ export class HousesController {
           document.getElementById('house-form').classList.toggle('visually-hidden')
   }
 
+  async deleteHouse(houseId){
+    try{
+      await housesService.deleteHouse(houseId)
+    }catch (error){
+      alert(error.message)
+    }
+  }
 }

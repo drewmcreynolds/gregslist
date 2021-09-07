@@ -8,8 +8,16 @@ export function getHouseFormTemplate() {
       <input type="number" class="form-control" name="price" id="price" min="25000" max="99999999">
     </div>
     <div class="form-group">
-    <label for="location" class="">Location:</label>
-    <input type="location" class="form-control" name="location" id="location">
+    <label for="levels" class="">Levels:</label>
+    <input type="levels" class="form-control" name="levels" id="levels">
+    </div>
+    <div class="form-group">
+    <label for="bedrooms" class="">Bedrooms:</label>
+    <input type="bedrooms" class="form-control" name="bedrooms" id="bedrooms">
+    </div>
+    <div class="form-group">
+    <label for="bathrooms" class="">Bathrooms:</label>
+    <input type="bathrooms" class="form-control" name="bathrooms" id="bathrooms">
     </div>
     <div class="form-group">
     <label for="year" class="">year:</label>
@@ -20,13 +28,10 @@ export function getHouseFormTemplate() {
     <textarea type="text" class="form-control" name="description" id="description" rows="5"></textarea>
     </div>
     <div class="form-group">
-    <label for="img" class="">img:</label>
-    <input type="url" class="form-control" name="img" id="img" required>
+    <label for="imgUrl" class="">imgUrl:</label>
+    <input type="imgUrl" class="form-control" name="imgUrl" id="imgUrl" required>
     </div>
-    <div class="form-group">
-      <label for="NWQ" class="">Is this a new build?</label>
-      <input type="checkbox" name="NWQ" id="NWQ" checked>
-    </div>
+    
     <div class="button-group my-3">
       <button type="reset" class="btn btn-secondary">clear</button>
       <button type="submit" class="btn btn-primary">submit</button>
